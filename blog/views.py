@@ -15,14 +15,11 @@ def add_items(y):
     return x
 
 def home(request):
-    context = {
-        'posts': Post.objects.all()
-    }
-    return render(request, 'blog/posts.html', context)
+    return render(request, 'blog/home.html')
 
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'blog/home.html'
+    template_name = 'blog/posts.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
