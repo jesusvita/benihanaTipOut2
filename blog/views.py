@@ -14,6 +14,7 @@ def add_items(y):
         x += float(i)
     return x
 
+@login_required
 def home(request):
     return render(request, 'blog/home.html')
 
