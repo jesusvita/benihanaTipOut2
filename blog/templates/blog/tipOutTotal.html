@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+
+
+{% block content %}
+<div class="justify-content-center w-75">
+  <div class="row text-center" style="font-size: 1.5rem; border: red" >
+
+    <ul class="col-6 list-group">
+      <li class="list-group-item border-danger mb-1"><strong>Chef</strong><br/>${{ tipout.teppan }}</li>
+      <li class="list-group-item border-danger"><strong>Sushi</strong><br/>${{ tipout.sushi }}</li>
+    </ul>
+
+    <ul class="col-6 list-group">
+        <li class="list-group-item border-danger mb-1"><strong>Bar</strong><br/>${{ tipout.bar }}</li>
+        <li class="list-group-item border-danger"><strong>Busser</strong><br/>${{ tipout.busser }}</li>
+    </ul>
+
+  </div>
+
+  <div class="row mt-3" style="font-size: 2.5rem; border: red">
+    <ul class="col">
+      <li class="list-group-item border-danger">Total: ${{ tipout.total }}</li>
+      {% if tip != "" %}
+        {% if tip > 0 %}
+        <li class="list-group-item border-danger" style="color: green">Tip: ${{ tipout.tip }}</li>
+        {% else %}
+        <p class="text-center" style="font-size: 0.9rem"> If you have a negative tip that means you are paying out of pocket.</p>
+        <li class="list-group-item border-danger" style="color: red">Tip: ${{ tipout.tip }}</li>
+
+        {% endif %}
+      {% endif %}
+    </ul>
+  </div>
+
+
+<div class="w-100"></div>
+
+
+  <form method="POST" action="">
+    {% csrf_token %}
+    <input class="btn d-flex justify-content-center mx-auto" style="background-color:#d8111b; color:#fff; width:100px;" type="submit" value="New Tip Out">
+  </form>
+</div>
+{% endblock %}

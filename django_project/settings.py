@@ -25,7 +25,7 @@ SECRET_KEY = 'b@_s0)ehcc+afh$&n6@jb#ppxrq#&3say$j!3!33_^5xsf%^f*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['JesusVita2.pythonanywhere.com']
+ALLOWED_HOSTS = ['JesusVita2.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

@@ -1,4 +1,59 @@
 {% extends "blog/base.html" %}
 {% block content %}
-  <h1>Blog about!</h1>
+
+
+<form method="POST" action="" autocomplete="off">
+  {% csrf_token %}
+  <div class="justify-content-center w-90">
+    <div class="input-group mb-3 justify-content-center">
+      <div class="input-group-prepend mr-1 ">
+          <span class="input-group-text justify-content-center" style="background-color:#d8111b; color:#fff; width:70px;" id="inputGroup-sizing-default">Teppan</span>
+      </div>
+      <div class="input-group-prepend">
+          {{form.teppan.errors}}
+          {{form.teppan}}
+      </div>
+    </div>
+
+    <div class="input-group mb-3 justify-content-center">
+      <div class="input-group-prepend mr-1">
+          <span class="input-group-text justify-content-center" style="background-color:#d8111b; color:#fff; width:70px;" id="inputGroup-sizing-default">Sushi</span>
+      </div>
+      <div class="input-group-prepend float-right">
+          {{form.sushi.errors}}
+          {{form.sushi}}
+      </div>
+    </div>
+
+    <div class="input-group mb-3 justify-content-center">
+      <div class="input-group-prepend mr-1">
+          <span class="input-group-text justify-content-center" style="background-color:#d8111b; color:#fff; width:70px;" id="inputGroup-sizing-default">Bar</span>
+      </div>
+      <div class="input-group-prepend">
+          {{form.bar.errors}}
+          {{form.bar}}
+      </div>
+    </div>
+
+    <div class="input-group mb-3 justify-content-center">
+
+      <div class="input-group-prepend mr-1">
+          <span class="input-group-text justify-content-center" style="background-color:#d8111b; color:#fff; width:70px;" id="inputGroup-sizing-default">Tip</span>
+      </div>
+      <div class="input-group-prepend">
+
+          {{form.tip.errors}}
+          {{form.tip}}
+      </div>
+
+    </div>
+  </div>
+
+
+    <input class="btn d-flex justify-content-center mx-auto" style="background-color:#d8111b; color:#fff; width:100px;" type="submit" value="Submit">
+    <hr style="border-color:rgba(242,0,0,1.00);">
+    <div class="mx-auto text-center" style="width: 70%;">
+    <p class="" style="font-size: 0.9rem;"> If you don't know how much tip you got just leave it blank </p>
+    </div>
+</form>
 {% endblock content %}
