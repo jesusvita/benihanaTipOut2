@@ -11,5 +11,6 @@ urlpatterns = [
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('tipapp/', views.tip, name='blog-tip'),
     path('tipapp/<int:id>/', views.benihana, name='blog-benihana'),
+    path('posts/', views.home, name='blog-home'),
 
 ]

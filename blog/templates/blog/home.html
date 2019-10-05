@@ -6,7 +6,7 @@
      of the screen. I want to do this with every user
      so I have to figure that out.
      -->
-<h1 class="mr-3" style="color:#000; margin:-25px 0px 100px 0px;">Hello, {{ user.username }}</h1>
+<h1 class="mr-1 mb-5" style="color:#000; font-size: 50px;">Hello, {{ user.username }}</h1>
 
 <!-- I want to have four buttons in the center of the screen.-->
 <div class="row text-center d-flex justify-content-center">
@@ -24,7 +24,7 @@
 <div class="row text-center d-flex justify-content-center mt-5" style="">
   <!-- Third button will be schedule intergration -->
   <div class="col-sm-3 mr-3" style="width:40%;">
-    <button type="button" class="btn btn-primary btn-lg btn-block" style="height:100px">Block level button</button>
+    <a class="btn btn btn-primary btn-lg btn-block" style="height:100px" href="{% url 'blog-home' %}">Posts</a>
   </div>
   <!-- Profie -->
   <div class="col-sm-3  ml-3" style="width:40%;">
