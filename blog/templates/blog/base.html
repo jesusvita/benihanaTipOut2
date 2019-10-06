@@ -9,20 +9,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
-    <title> Django Blog - {{ title }}</title>
+    <title> BeniApp - {{ title }}</title>
     {% else %}
-    <title> Django Blog</title>
+    <title> BeniApp</title>
     {% endif %}
 </head>
-<body style="background-color:#800020;">
+<body class = "border h-100" style="background-color:#ac0e0eec;">
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-bottom">
         <div class="container">
-          <a class="navbar-brand mr-4" href="/">Django Blog</a>
+          <a class="navbar-brand mr-4" href="/">BeniApp</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -47,8 +47,8 @@
         </div>
       </nav>
     </header>
-    <main role="main" class="container" style="background-color:##FF0000; padding:%; margin: -10px, 0px, 0px, 0px;">
-        <div class="row">
+    <main role="main" class="shadow p-3  bg-white rounded container" style=" background-color:rgb(255, 242, 242); height: 500px; margin: -10px, 0px, 0px, 0px; ">
+        <div class="row h-100">
           <div class="col">
             {% if messages %}
               {% for message in messages %}

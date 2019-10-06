@@ -6,29 +6,29 @@
      of the screen. I want to do this with every user
      so I have to figure that out.
      -->
-<h1 class="mr-1 mb-5" style="color:#000; font-size: 50px;">Hello, {{ user.username }}</h1>
+<h1 class="mr-1 mb-5" style="font-family: 'Noto Serif', serif; color:rgba(196, 13, 13, 0.911); font-size: 50px; font-weight: bold; ">Hello, {{ user.username }}</h1>
 
 <!-- I want to have four buttons in the center of the screen.-->
 <div class="row text-center d-flex justify-content-center">
 
   <!-- First button is going to be the new tip button-->
   <div class="col-sm-3 mr-3" style="width:40%;">
-    <a class="btn btn btn-primary btn-lg btn-block" style="height:100px" href="{% url 'blog-tip' %}">New Tip Out</a>
+    <a class="shadow btn btn btn-primary btn-lg btn-block" style="height:100px; background-color: rgb(206, 34, 34); border-color: rgb(0, 0, 0);" href="{% url 'blog-tip' %}">New Tip Out</a>
   </div>
   <!-- Second button is going to be a tip logger-->
   <div class="col-sm-3 ml-3" style="width:40%;">
-    <button type="button" class="btn btn-primary btn-lg btn-block" style="height:100px">Tip Log</button>
+    <a class="shadow btn btn btn-primary btn-lg btn-block" style="height:100px; background-color: rgb(206, 34, 34); border-color: rgb(0, 0, 0);"> Tip Log </a>
   </div>
 </div>
 
 <div class="row text-center d-flex justify-content-center mt-5" style="">
   <!-- Third button will be schedule intergration -->
   <div class="col-sm-3 mr-3" style="width:40%;">
-    <a class="btn btn btn-primary btn-lg btn-block" style="height:100px" href="{% url 'posts' %}">Posts</a>
+    <a class="shadow btn btn btn-primary btn-lg btn-block" style="height:100px; background-color: rgb(206, 34, 34); border-color: rgb(0, 0, 0);" href="{% url 'posts' %}">Posts</a>
   </div>
   <!-- Profie -->
   <div class="col-sm-3  ml-3" style="width:40%;">
-    <button type="button" class="btn btn-primary btn-lg btn-block" style="height:100px">Block level button</button>
+    <a class="shadow btn btn btn-primary btn-lg btn-block" style="height:100px; background-color: rgb(206, 34, 34); border-color: rgb(0, 0, 0);"> </a>
   </div>
 </div>
 
